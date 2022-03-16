@@ -1,0 +1,80 @@
+<html>
+<head>
+<title>Calculadora</title>
+
+<script language="JavaScript">
+
+function opera(){
+
+/*
+	if(signo.value=='+'){
+		resultado=(parseInt(a.value))+(parseInt(b.value));
+		document.getElementById("solucion").innerHTML=resultado;
+	}
+	if(signo.value=='-'){		
+		resultado=(parseInt(a.value))-(parseInt(b.value));
+		document.getElementById("solucion").innerHTML=resultado;
+	}
+	if(signo.value=='*'){
+		resultado=(parseInt(a.value))*(parseInt(b.value));
+		document.getElementById("solucion").innerHTML=resultado;
+	}
+	if(signo.value=='/'){
+		resultado=(parseInt(a.value))/(parseInt(b.value));
+		document.getElementById("solucion").innerHTML=resultado;
+	}
+*/
+
+	switch(signo.value){
+		case '+':
+			solucion.innerHTML=(parseInt(a.value))+(parseInt(b.value));
+			break;
+		case '-':
+			solucion.innerHTML=(parseInt(a.value))-(parseInt(b.value));
+			break;
+		case '*':
+			solucion.innerHTML=(parseInt(a.value))*(parseInt(b.value));
+			break;
+		case '/':
+			solucion.innerHTML=(parseInt(a.value))/(parseInt(b.value));
+			break;
+	}
+}
+</script>
+</head>
+<body bgcolor="lightYellow">
+<h1 align="center">Calculadora</h1>
+
+<table align="center" border="2" bgcolor="lightblue">
+<tr>
+	<td>
+		<input id="a">
+	</td>
+
+	<td>
+		<select id="signo">
+			<option>+</option>
+			<option>-</option>
+			<option>*</option>
+			<option>/</option>
+	</td>
+		
+	<td>
+		<input id="b">
+	</td>
+
+	<td>
+		<input type="button" value="=" onClick="opera()">
+	</td>
+
+	<td id="solucion" width="100" bgcolor="E5E4E2">
+		
+	</td>
+</td>
+</table>
+<br><br>
+<center>
+<a id="enlace1" href="Marcas022.html">Ir a Marcas022</a>
+<a id="enlace2" href="Marcas024.html">Ir a Marcas024</a>
+</body>
+</html>

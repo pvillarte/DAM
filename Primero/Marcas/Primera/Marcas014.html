@@ -1,0 +1,44 @@
+<html>
+<head>
+<title>Moviendo OBJETOS</title>
+
+<style type="text/css">
+#pato{position:absolute; left:100; top:100}
+#pavo{position:absolute; left:700; top:100}
+#enlace1{position:absolute; left:50; top:600}
+#enlace2{position:absolute; left:175; top:600}
+</style>
+
+<script language="JavaScript">
+objeto = null;
+relieve = 2;
+function cargar(){
+	if(event.srcElement.tagName == "IMG"){
+		objeto=event.srcElement;
+		objeto.style.zIndex = relieve;
+		relieve++;
+	}
+}
+function mover(){
+	if(objeto != null){
+		objeto.style.left = event.x-100;
+		objeto.style.top = event.y-100;
+	}
+}
+function soltar(){
+	objeto=null;
+}
+
+</script>
+
+</head>
+<body onMouseDown="cargar()" onMouseMove="mover(); event.returnValue=false" onMouseUp="soltar()">
+	<h1 align="center">Movimiento OBJETOS</h1>
+
+<img id="pato" src="imagenes/fotopato.jpg" height="200" width="200">
+<img id="pavo" src="imagenes/pavo.jpg" height="200" width="200">
+
+	<a id="enlace1" href="Marcas013.html">Ir a Marcas013</a>
+	<a id="enlace2" href="Marcas015.html">Ir a Marcas015</a>
+</body>
+</html>

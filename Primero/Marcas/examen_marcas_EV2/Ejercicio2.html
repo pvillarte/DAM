@@ -1,0 +1,72 @@
+<html>
+<head>
+<title>Ejercicio 2</title>
+<script type="text/javascript" src="jquery-1.11.2.min.js"></script>
+<script language="JavaScript">
+$(document).ready(function(){
+    setTimeout(ocultaRojoMuestraVerde, 5000);
+});
+
+function ocultaRojoMuestraVerde(){
+    $("#rojo").animate({opacity: "0"},"slow", function(){
+        $("#verde").animate({opacity: "1"}, "slow");
+        setTimeout(ocultaVerdeMuestraAmarillo, 5000);
+    });
+}
+function ocultaVerdeMuestraAmarillo(){
+    $("#verde").animate({opacity: "0"},"slow", function(){
+        $("#amarillo").animate({opacity: "1"}, "slow");
+        setTimeout(ocultaAmarilloMuestraRojo, 5000);
+    });
+}
+function ocultaAmarilloMuestraRojo(){
+    $("#amarillo").animate({opacity: "0"},"slow", function(){
+        $("#rojo").animate({opacity: "1"}, "slow");
+        setTimeout(ocultaRojoMuestraVerde, 5000);
+    });
+}
+
+</script>
+<style type="text/css">
+    #rojo{
+        height: 150px;
+        width: 150px;
+        background-color: red;
+        margin: 0px;
+        opacity: 1;
+        border-radius: 15px;
+        }
+    #amarillo{
+        height: 150px;
+        width: 150px;
+        background-color: yellow;
+        margin: 0px;
+        opacity: 0;
+        border-radius: 15px;
+    }
+    #verde{
+        height: 150px;
+        width: 150px;
+        background-color: green;
+        margin: 0px;
+        opacity: 0;
+        border-radius: 15px;
+    }
+    #semaforo{
+        height: 450px;
+        width: 150px;
+        background-color: black;
+        margin: 0px;
+        visibility:visible;
+        border-radius: 15px;
+    }
+    </style>
+</head>
+<body>
+    <div id="semaforo">
+        <div id="rojo"></div>
+        <div id="amarillo"></div>
+        <div id="verde"></div>
+    </div>
+</body>
+</html>
