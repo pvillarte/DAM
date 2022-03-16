@@ -1,0 +1,32 @@
+<html>
+<head>
+<title>Elementos del objeto DOCUMENT</title>
+
+<style type="text/css">
+</style>
+
+<script language="JavaScript">
+function mostrar(){
+//	alert(window.document.all.length); //no es necesario poner window, ya que está implícito
+for(i=0; i<document.all.length;i++)
+	alert(document.all[i].tagName)
+for(i=0; i<document.all.length;i++)
+	alert(document.images[i].src)
+
+}
+//document es donde aparece la información
+</script>
+
+</head>
+<body onload="mostrar()">
+	<h1 align="center">Elementos del objeto DOCUMENT</h1>
+
+<img src="imagenes/equis.png" height="100">
+<img src="imagenes/circulo.png" height="100">
+
+<br>
+
+	<a href="Marcas012.html">Ir a Marcas012</a>
+	<a href="Marcas014.html">Ir a Marcas014</a>
+</body>
+</html>

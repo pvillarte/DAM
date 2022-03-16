@@ -1,0 +1,28 @@
+<html>
+<head>
+<title>Reloj digital con JavaScript</title>
+
+<script language="JavaScript">
+	function reloj(){
+	var fecha = new Date();
+	var hora = fecha.getHours();
+	var minuto = fecha.getMinutes();
+	var segundo = fecha.getSeconds();
+	var horaStr="";
+	var minutoStr="";
+	var segundoStr="";
+	horaString=((hora<10)?"0":"")+hora+":"+((minuto<10)?"0":"")+minuto+":"+((segundo<10)?"0":"")+segundo;
+	caja.value=horaString;
+	setTimeout("reloj()",1000);      //La función setTimeout ejecuta el primer parámetro solo una vez.
+	}
+</script>
+</head>
+<body onload="reloj()">
+<h1 align="center">Reloj digital JavaScript</h1>
+<center>
+<input id="caja" size="8">
+<br>
+<a id="enlace1" href="Marcas020.html">Ir a Marcas020</a>
+<a id="enlace2" href="Marcas022.html">Ir a Marcas022</a>
+</body>
+</html>
