@@ -1,0 +1,47 @@
+<html>
+<head>
+<title>M&eacutetodos que juegan con la opacidad</title>
+<script type="text/javascript" src="jquery-1.11.2.min.js"></script>
+<script language="JavaScript">
+//La opacidad juega con valores entre 0 y 1
+$(document).ready(function(){
+
+	$("#ocultar").click(function(event){
+		$("#rectangulo").fadeOut(3000);
+	});
+	
+	//fadeIn(miliseg de actuacion, "metodo de actuacion", macro o funcion)
+	$("#mostrar").click(function(event){
+		$("#rectangulo").fadeIn(1000, "swing", function(){
+			alert("Se acabó el fadeIn()");
+		});
+	});
+
+	//En el fadeTo el segundo variable es el valor de transparencia al que llegar, que esta entre 0 y 1
+	$("#mostrar2").click(function(event){
+		$("#rectangulo").fadeTo(2000, 0.5, function(){
+			alert("Se acabó el fadeTo()");
+		});
+	});
+	
+	//El toggle si es visible lo oculta y viceversa
+	$("#toggle").click(function(event){
+		$("#rectangulo").fadeToggle(1000, function(){
+			alert("Se acabó el fadeToggle()");
+		});
+	});
+
+});
+
+</script>
+<style type="text/css">
+</style>
+</head>
+<body>
+<div id="rectangulo" style="padding:100px 10px 100px 10px;background-color:#000;color:#FFF">Rectángulo de ejemplo que variará de opacidad</div>
+<input type="button" id="ocultar" value="ocultar con fadeOut()">
+<input type="button" id="mostrar" value="mostrar con fadeIn()">
+<input type="button" id="mostrar2" value="mostrar con fadeTo()">
+<input type="button" id="toggle" value="variar con fadeToggle()">
+</body>
+</html>
