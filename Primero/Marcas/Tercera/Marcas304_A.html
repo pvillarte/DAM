@@ -1,0 +1,28 @@
+<html>
+<head>
+<title>Variable sessionStorage</title>
+<script language="JavaScript">
+    function manipular(){
+        contenido.innerHTML=sessionStorage.length;  //Nos devuelve el número de elementos de la variable de sesión
+        sessionStorage.setItem("Antonio", 18);
+        contenido.innerHTML += "<br>" + sessionStorage.length;
+        contenido.innerHTML += "<br>" + sessionStorage.key(0);
+        contenido.innerHTML += "<br>" + sessionStorage.getItem("Antonio");  //Devuelve valor asociado a la clave
+        sessionStorage.setItem("Juan", 20);
+        contenido.innerHTML += "<br>" + sessionStorage.length;
+        contenido.innerHTML += "<br>" + sessionStorage.key(1) + ": " + sessionStorage.getItem("Juan");
+        sessionStorage.removeItem("Antonio");
+        contenido.innerHTML += "<br>" + sessionStorage.length;
+        contenido.innerHTML += "<br>" + sessionStorage.key(1);  //Al eliminar el item 0, el 1 pasa al 0
+        contenido.innerHTML += "<br>" + sessionStorage.key(0);
+        sessionStorage.clear();
+        contenido.innerHTML += "<br>" + sessionStorage.length;
+    }   //Elimina todos elementos de la variable de sesión
+</script>
+</head>
+<body onload="manipular()">
+    <div id="contenido">
+        
+    </div>
+</body>
+</html>
