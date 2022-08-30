@@ -1,0 +1,26 @@
+<html>
+<head>
+<title>Canvas 6</title>
+<script type="application/javascript">
+    window.onload = function(){
+        var ctx = canvas.getContext("2d");
+        ctx.beginPath();
+        ctx.arc(75,75,50,0,Math.PI*2,true);
+        ctx.fill();
+        ctx.fillStyle="#FFF"
+        ctx.beginPath();
+        ctx.arc(75,75,35,0,Math.PI,false);
+        ctx.fill();
+        ctx.beginPath();
+        ctx.arc(60,65,5,0,Math.PI*2,true);
+        ctx.fill();
+        ctx.beginPath();
+        ctx.arc(90,65,5,0,Math.PI*2,true);
+        ctx.fill();
+    }
+</script>
+</head>
+<body>
+    <canvas id="canvas" width="350" height="350"></canvas>
+</body>
+</html>
