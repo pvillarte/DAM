@@ -1,0 +1,56 @@
+<html>
+<head>
+<style type="text/css">
+.amarillo{background-color:yellow}
+.verde{background-color:green}
+.azul{background-color:blue}
+.rojo{background-color:red}
+</style>
+<title>Ejercicio001</title>
+<script language="JavaScript">
+function cambiar(){
+	objeto=event.srcElement;
+	if (objeto.className=="rojo")
+		colorElegido="rojo";
+	if (objeto.className=="amarillo")
+		colorElegido="amarillo";
+	if (objeto.className=="verde")
+		colorElegido="verde";
+	if (objeto.className=="azul")
+		colorElegido="azul";
+	if (objeto.className=="neutro")
+		objeto.className=colorElegido;
+	
+}
+</script>
+</head>
+<body onclick="cambiar()">
+	<h1 align="center">TABLAS</h1>
+	<table border="5" align="center" width="80%" height="40%" cellpadding="15" cellspacing="4">
+		<tr>
+			<td class="neutro"></td>
+			<td class="neutro"></td>
+			<td class="neutro"></td>
+			<td class="neutro"></td>
+		</tr>
+		<tr>
+			<td class="neutro"></td>
+			<td class="neutro"></td>
+			<td class="neutro"></td>
+			<td class="neutro"></td>
+		</tr>
+		<tr>
+			<td class="neutro"></td>
+			<td class="neutro"></td>
+			<td class="neutro"></td>
+			<td class="neutro"></td>
+		</tr>
+		<tr>
+			<td class="rojo"></td>
+			<td class="amarillo"></td>
+			<td class="verde"></td>
+			<td class="azul"></td>
+		</tr>
+	</table>
+</body>
+</html>

@@ -1,0 +1,26 @@
+<html>
+<head>
+<title>Bucle cambio tama&ntildeo y opacidad</title>
+<script type="text/javascript" src="jquery-1.11.2.min.js"></script>
+<script language="JavaScript">
+var imagen1=$("<img>", {src:"imagenes/patoenlace.jpg", id:"imagen1", width:200,
+	css:{"padding":"2px", "cursor":"pointer"},
+	click:function(event){document.location="Marcas229.html"}});
+var imagen2=$("<img>", {src:"imagenes/patoenlace.jpg", id:"imagen1", width:200,
+	css:{"padding":"2px", "cursor":"pointer"},
+	click:function(event){document.location="Marcas228.html"}});
+
+$(document).ready(function(){
+	$(document).on("contextmenu", function(e){
+		$("body").append(imagen1);
+	});
+	$(document).on("click", function(e){
+		$("body").append(imagen2);
+	});
+});
+</script>
+</head>
+<body align="center">
+<span style="opacity:0"; font-size:"5pt"; id="capa0">Capa en la que cambiamos tamaño y opacidad</span>
+</body>
+</html>

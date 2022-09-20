@@ -1,0 +1,37 @@
+<html>
+<head>
+<title>Cambiar de clase</title>
+<style type="text/css">
+.bloque1{position:absolute; width:300px; top:50px; left:20px; background-color:lemonchiffon}
+.bloque2{position:absolute; width:300px; top:50px; left:400px; background-color:lightcoral}
+</style>
+<script language="JavaScript">
+function cambiar(){
+	if (b1.className=="bloque1"){
+		b1.className="bloque2";
+		b2.className="bloque1";
+	} else {
+		b1.className="bloque1";
+		b2.className="bloque2";
+		}
+}
+</script>
+
+</head>
+<body>
+	<h1 align="center">Cambiar de clase</h1>
+	<div id="b1" class="bloque1">
+		<img src="imagenes/patoenlace.jpg" height="300" width="300">Ave palmípeda acuática, con el pico aplanado y patas cortas, 
+		con dedos unidos entre sí por una membrana, de la cual existen varias especies, algunas de ellas domésticas.
+	</div>
+	<div id="b2" class="bloque2">
+		<img src="imagenes/pavo.jpg" height="300" width="300">Ave del orden de las galliformes, oriunda de América, más grande que la gallina,
+		cuello largo y sin plumas, del que cuelgan, al igual que de la cabeza, unas carnosidades rojas.
+	</div>
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+	<input type="button" value="Intercambio" onclick="cambiar()">
+<br><br><br>
+	<a href="Marcas010.html">Ir a Marcas010</a>
+	<a href="Marcas012.html">Ir a Marcas012</a>
+</body>
+</html>

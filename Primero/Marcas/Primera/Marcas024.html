@@ -1,0 +1,57 @@
+<html>
+<head>
+<style type="text/css">
+#robin{position:absolute}
+#flecha{position:absolute; left:100; visibility:hidden}
+#globo{position:absolute}
+html{overflow:hidden}
+</style>
+<title>Robin Hood</title>
+<script language="JavaScript">
+x=100;         //Es equivalente a flecha.style.left
+i=800;         //Es equivalente a globo.style.top
+function moverRobin(){
+	if (event.y>75)
+		robin.style.top = event.y-75;
+}
+function disparar(){
+	if (x==100){
+		flecha.style.top = event.y-20;
+		flecha.style.visibility="visible";
+		intervalo1=setInterval(moverFlecha, 1);
+	}
+}
+function moverFlecha(){
+	if (x<=1300){
+		x+=5;
+		flecha.style.left=x;
+	}
+	if (x==1000){
+		if((parseInt(flecha.style.top)>parseInt(globo.style.top))&&(parseInt(flecha.style.top)<parseInt(globo.style.top)+100)){
+			globo.style.visibility="hidden";
+		}
+	}
+	if (x==1300){
+		clearInterval(intervalo1);
+		flecha.style.visibility="hidden";
+		x=100;
+	}
+}
+function moverGlobo(){
+	if(i>(-200)){
+		globo.style.top=i;
+		i--;
+	}else{
+		i=800;
+		globo.style.visibility="visible";
+	}
+}
+</script>
+</head>
+<body onMouseMove="moverRobin()" onClick="disparar()" onLoad="intervalo2=setInterval('moverGlobo()', 10)">
+	<h1 align="center">Robin Hood</h1>
+	<img id="globo" src="imagenes/globo.png" height="200" style="left:1000">
+	<img id="robin" src="imagenes/robin.png" height="200">
+	<img id="flecha" src="imagenes/flecha.png" height="40" style="left:20">
+</body>
+</html>

@@ -1,0 +1,45 @@
+<html>
+<head>
+<title>Tres en raya (fase2)</title>
+<style type="text/css">
+.val{background-color:yellow;width:30;height:35;text-align:center}
+.noval{background-color:lime;width:30;height:35;text-align:center}
+</style>
+
+<script language="JavaScript">
+var n= 0;    //El unico tipo de dato es var
+function cambiar(){
+	//alert(event.srcElement.className); //Nos devuelve el elemento sobre el que se ha producido el evento
+	objeto=event.srcElement;
+	
+	if (objeto.className=="val")
+		if (n==0){
+			objeto.className="noval";
+			objeto.innerHTML = "<img src=imagenes/equis.png width=30 height=30>";
+			n++;
+		}else if (n==1){
+			objeto.className="noval";
+			objeto.innerHTML = "<img src=imagenes/circulo.png width=30 height=30>";
+			n--;
+		}
+
+}
+</script>
+</head>
+<body onclick="cambiar()">
+<h1 align="center">Juego de tres en raya</h1>
+<table align="center" border="5" cellpadding="0" cellspacing="5">
+	<tr>
+		<td class="val"></td><td class="val"></td><td class="val"></td>
+	</tr>
+	<tr>
+		<td class="val"></td><td class="val"></td><td class="val"></td>
+	</tr>
+	<tr>
+		<td class="val"></td><td class="val"></td><td class="val"></td>
+	</tr>
+</table>
+	<a href="Marcas009.html">Ir a Marcas009</a>
+	<a href="Marcas011.html">Ir a Marcas011</a>
+</body>
+</html>
