@@ -1,0 +1,23 @@
+#tabla{
+    border: 3px solid black;
+}
+
+#fila{
+    border: 1px solid red;
+}
+
+#columna{
+    border: 1px solid blue;
+}
+
+#td1{
+    background-color: azure;
+}
+#td2{
+    background-color: lightcoral;
+}
+#td3{
+    background-color: lightpink;
+}
+
+
