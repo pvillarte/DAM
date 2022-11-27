@@ -1,7 +1,0 @@
-model/Titulacion.class
-connection/H2Connection.class
-connection/AbstractConnection.class
-servlet/AbstractServlet.class
-servlet/titulacion/BaseServlet.class
-servlet/titulacion/InsertDataServlet.class
-repository/TitulacionRepository.class
